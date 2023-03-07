@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform cam;
     [SerializeField] private float camFollowDistance = 5;
     private Vector2 cameraPoint = new Vector2();
+
+    public List<FollowerBehaviour> followers;
 
     private void Awake()
     {
