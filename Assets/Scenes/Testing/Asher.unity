@@ -3420,5 +3420,9 @@ PrefabInstance:
       propertyPath: paralaxObjects.Array.data[3]
       value: 
       objectReference: {fileID: 1297931088}
+    - target: {fileID: 3058478377513682023, guid: 4e851057a207e8148b4e5fee507bccbc, type: 3}
+      propertyPath: timer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e851057a207e8148b4e5fee507bccbc, type: 3}
