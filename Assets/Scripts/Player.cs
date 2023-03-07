@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 delta;
+
+        transform.right *= moveInput.x;
+        
         delta = (moveInput.normalized) * (moveSpeed * Time.fixedDeltaTime);
         characterController.Move(delta);
 
