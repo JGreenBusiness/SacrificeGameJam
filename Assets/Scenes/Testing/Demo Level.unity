@@ -1538,6 +1538,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 275180574}
+    - target: {fileID: 593614344464466003, guid: 3fbc9ecbe3ff6b942aea50b12002af56, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1713
+      objectReference: {fileID: 0}
     - target: {fileID: 3188438484002620541, guid: 3fbc9ecbe3ff6b942aea50b12002af56, type: 3}
       propertyPath: cam
       value: 
@@ -1775,6 +1779,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 838418276}
+    - target: {fileID: 649987632296653229, guid: 10c4cbbb29ec926489066c291a5a62c9, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1913
+      objectReference: {fileID: 0}
     - target: {fileID: 9208617673018825153, guid: 10c4cbbb29ec926489066c291a5a62c9, type: 3}
       propertyPath: target
       value: 
