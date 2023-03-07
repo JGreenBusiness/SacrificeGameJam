@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     private Vector2 moveInput = new Vector2();
     [SerializeField]private float moveSpeed = 5;
     [SerializeField] private Transform cam;
+    private Vector2 cameraPoint = new Vector2();
 
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -36,5 +38,12 @@ public class Player : MonoBehaviour
         Vector2 delta;
         delta = (moveInput) * (moveSpeed * Time.fixedDeltaTime);
         characterController.Move(delta);
+
+        if (Vector2.Distance(transform.position,cameraPoint) > 5)
+        {
+            cameraPoint += delta;
+        }
+
+        cam.position = new Vector3(cameraPoint.x,cameraPoint.y,cam.position.z);
     }
 }
