@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2814236897010640904}
   - component: {fileID: 2814236897010640907}
   - component: {fileID: 2814236897010640906}
+  - component: {fileID: 8249681637399922718}
   - component: {fileID: -8595793797088811009}
   m_Layer: 0
   m_Name: SkeletonEnemy
@@ -106,6 +107,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8249681637399922718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2814236897010640917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db95a7b78bd445ca93583899ae283df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 3
+  stopThreshold: 0.5
+  attackBounds: {x: 0, y: 0}
 --- !u!114 &-8595793797088811009
 MonoBehaviour:
   m_ObjectHideFlags: 0

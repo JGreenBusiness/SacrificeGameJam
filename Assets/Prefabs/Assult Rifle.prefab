@@ -115,7 +115,7 @@ MonoBehaviour:
   bullet: {fileID: 345545655551785859, guid: 852b3a8852ef50946a31172214efc59f, type: 3}
   gunDistance: 1
   bulletDistance: 0.3
-  fireRate: 0.3
+  fireRate: 0.05
 --- !u!1001 &8879339014844180682
 PrefabInstance:
   m_ObjectHideFlags: 0

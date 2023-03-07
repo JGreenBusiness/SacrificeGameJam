@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fecbd024df4d6f9cff39f9331efc9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 4013973702433535196, guid: 1323eda93d7b0354fb4aa36321341e8c, type: 3}
+  zombies:
+  - {fileID: 4013973702433535196, guid: 1323eda93d7b0354fb4aa36321341e8c, type: 3}
+  - {fileID: 2814236897010640917, guid: 55004ac48bde7f641917758d792c13ea, type: 3}
+  - {fileID: 8301574647321782385, guid: ac5e31064c3637e42a2df99bd0b5c7ed, type: 3}
   spawnTime: 4
+  timer: 0
