@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4340948925899689675}
   - component: {fileID: 4340948925899689672}
+  - component: {fileID: 7550328765686323308}
+  - component: {fileID: 332547849624279977}
   m_Layer: 0
   m_Name: SurvivorHouse
   m_TagString: Untagged
@@ -25,10 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4340948925899689673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8, y: 2.59, z: 0.31}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.364836, y: 2.364836, z: 2.364836}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7630025656233064391}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,3 +87,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &7550328765686323308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340948925899689673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6799998, y: 0.79580593, z: 1.121867}
+  m_Center: {x: 0, y: -0.51710093, z: -0.46093342}
+--- !u!114 &332547849624279977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340948925899689673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fec0c46c57c98f4c80d4f84b37480ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  survivors:
+  - {fileID: 4296900660033699064, guid: 00244c6044116da4f88b3078b268cf1a, type: 3}
+  - {fileID: 1006909916027545021, guid: 0fe0780af4437324c9feeb7270d04c9d, type: 3}
+  - {fileID: 4628649374169965510, guid: 97b1de4a43741e44ea6fca2f83c45537, type: 3}
+  - {fileID: 3668070104333169326, guid: bf42588332bf32449b4cc31c8aa29863, type: 3}
+  spawnTime: 1
+  timer: 0
+  canSpawn: 0
+--- !u!1 &8817049167965514730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7630025656233064391}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7630025656233064391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817049167965514730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.192, y: -0.549, z: -0.154}
+  m_LocalScale: {x: 0.4228623, y: 0.4228623, z: 0.4228623}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4340948925899689675}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

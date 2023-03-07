@@ -120,4 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   moveSpeed: 5
-  stopThreshold: 0
+  stopThreshold: 1

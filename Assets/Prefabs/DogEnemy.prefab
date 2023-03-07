@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8301574647321782382}
   - component: {fileID: 8301574647321782383}
+  - component: {fileID: 2947869896622292282}
   - component: {fileID: 8301574647321782384}
   m_Layer: 0
   m_Name: DogEnemy
@@ -85,6 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2947869896622292282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301574647321782385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db95a7b78bd445ca93583899ae283df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 4
+  stopThreshold: 0.5
+  attackBounds: {x: 0, y: 0}
 --- !u!95 &8301574647321782384
 Animator:
   serializedVersion: 4
