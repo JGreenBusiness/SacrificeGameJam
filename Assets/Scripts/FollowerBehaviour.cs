@@ -12,7 +12,7 @@ namespace DefaultNamespace
                 SetTarget(player.transform);
                 return;
             }
-            
+
             SetTarget(player.followers[index].transform);
         }
     }

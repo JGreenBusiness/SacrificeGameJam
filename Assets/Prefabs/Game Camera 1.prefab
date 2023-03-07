@@ -97,22 +97,6 @@ PrefabInstance:
       propertyPath: cameraPosition
       value: 
       objectReference: {fileID: 63640089784226530}
-    - target: {fileID: 3002149411092047552, guid: 905dc60e73cdda04186a97b454ae3e11, type: 3}
-      propertyPath: paralaxObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002149411092047552, guid: 905dc60e73cdda04186a97b454ae3e11, type: 3}
-      propertyPath: paralaxObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002149411092047552, guid: 905dc60e73cdda04186a97b454ae3e11, type: 3}
-      propertyPath: paralaxObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002149411092047552, guid: 905dc60e73cdda04186a97b454ae3e11, type: 3}
-      propertyPath: paralaxObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3002149411092047558, guid: 905dc60e73cdda04186a97b454ae3e11, type: 3}
       propertyPath: m_Name
       value: Paralax Controller
@@ -176,8 +160,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 63640089784226530}
     m_Modifications:
     - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
-      propertyPath: playerTrans
-      value: 
+      propertyPath: zombieLimit
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
       propertyPath: Spawners.Array.size
@@ -189,18 +173,6 @@ PrefabInstance:
       objectReference: {fileID: 3058478377513682023}
     - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
       propertyPath: Spawners.Array.data[1]
-      value: 
-      objectReference: {fileID: 6720512226754770135}
-    - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
-      propertyPath: zombieSpawners.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
-      propertyPath: zombieSpawners.Array.data[0]
-      value: 
-      objectReference: {fileID: 3058478377513682023}
-    - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
-      propertyPath: zombieSpawners.Array.data[1]
       value: 
       objectReference: {fileID: 6720512226754770135}
     - target: {fileID: 8559290511942197005, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
