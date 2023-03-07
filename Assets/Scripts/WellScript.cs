@@ -8,6 +8,7 @@ namespace DefaultNamespace
     {
         [SerializeField] private Player player;
         [SerializeField] private GameObject ammoPrefab;
+        [SerializeField] private Transform ammoSpawnLoc;
 
         private bool canSacri;
 
@@ -23,6 +24,8 @@ namespace DefaultNamespace
         private void Sacrifice()
         {
             player.RemoveFollower();
+
+            Instantiate(ammoPrefab, ammoSpawnLoc.position, Quaternion.identity);
         }
 
         private void OnTriggerEnter(Collider other)

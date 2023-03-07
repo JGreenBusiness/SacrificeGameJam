@@ -1116,6 +1116,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1267650898}
+    - target: {fileID: 3533779158064997768, guid: 487e4fa4297e1994d94187f6d5b431bc, type: 3}
+      propertyPath: ammoPrefab
+      value: 
+      objectReference: {fileID: 6476267105353875241, guid: 0bd86576432333d4f8b4ee22eb58452f, type: 3}
     - target: {fileID: 5999579923415041910, guid: 487e4fa4297e1994d94187f6d5b431bc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1896,7 +1900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267650892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08, y: -1.02, z: -0.56}
+  m_LocalPosition: {x: 4.08, y: -1.02, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3495,7 +3499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63640089784226530, guid: 4e851057a207e8148b4e5fee507bccbc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -8.84
       objectReference: {fileID: 0}
     - target: {fileID: 63640089784226530, guid: 4e851057a207e8148b4e5fee507bccbc, type: 3}
       propertyPath: m_LocalRotation.w
