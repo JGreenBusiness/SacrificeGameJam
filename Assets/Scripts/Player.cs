@@ -56,10 +56,10 @@ public class Player : MonoBehaviour
             Mathf.RoundToInt(cam.position.y * 100) / 100,cam.position.z),moveSpeed * Time.fixedDeltaTime);
     }
 
-    public void AddFollower()
+    public void AddFollower(Transform spawnPos)
     {
         // instantiates a new survivor
-        GameObject survivor = Instantiate(survivorPrefab);
+        GameObject survivor = Instantiate(survivorPrefab, spawnPos.position, Quaternion.identity);
         FollowerBehaviour newFollower = survivor.GetComponent<FollowerBehaviour>();
 
         // Runs the SetTarget function for the survivor

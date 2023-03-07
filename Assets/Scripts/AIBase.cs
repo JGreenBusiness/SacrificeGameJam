@@ -15,11 +15,6 @@ namespace DefaultNamespace
             AIManagerSingleton.instance.ai.Add(this);
         }
 
-        private void OnDestroy()
-        {
-            AIManagerSingleton.instance.ai.Remove(this);
-        }
-
         public void SetTarget(Transform _target)
         {
             target = _target;

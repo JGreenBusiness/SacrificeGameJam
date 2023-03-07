@@ -164,6 +164,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
+      propertyPath: survivorLimit
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559290511942197004, guid: 8974f6c0eb4cdf44894838f101a9b4d6, type: 3}
       propertyPath: Spawners.Array.size
       value: 2
       objectReference: {fileID: 0}

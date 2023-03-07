@@ -6,7 +6,11 @@ namespace DefaultNamespace
     public class ZombieBehaviour : AIBase
     {
         [SerializeField] private Vector2 attackBounds;
-
+        private void OnDestroy()
+        {
+            AIManagerSingleton.instance.ai.Remove(this);
+        }
+        
         private void OnDrawGizmos()
         {
             Color prevCol = Gizmos.color;

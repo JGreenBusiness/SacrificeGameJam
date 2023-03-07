@@ -7,8 +7,9 @@ namespace DefaultNamespace
     public class AIManagerSingleton : MonoBehaviour
     {
         public List<AIBase> ai;
-        public List<ZombieSpawner> zombieSpawners;
         public Transform playerTrans;
+        public List<SurvivorSpawner> survivorSpawners;
+        public List<ZombieSpawner> zombieSpawners;
         
         public int zombieLimit;
         public int zombieCount;
@@ -30,8 +31,10 @@ namespace DefaultNamespace
             for (int i = 0; i < ai.Count; i++)
                     ai[i].Move(Time.fixedDeltaTime);
             
-            //if(survivorCount < survivorLimit)
-                
+            if(survivorCount < survivorLimit)
+                for (int i = 0; i < survivorSpawners.Count; i++)
+                    survivorSpawners[i].UpdateSpawner(Time.fixedDeltaTime);
+
             if(zombieCount < zombieLimit)
                 for (int i = 0; i < 2; i++)
                     zombieSpawners[i].UpdateSpawner(Time.fixedDeltaTime);

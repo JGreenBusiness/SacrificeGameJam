@@ -9,6 +9,7 @@ namespace DefaultNamespace
     public class SurvivorSpawner : MonoBehaviour
     {
         [SerializeField] private List<GameObject> survivors;
+        [SerializeField] private Transform spawnPoint;
         [SerializeField] private float spawnTime = 1;
         [SerializeField] private float timer;
 
@@ -37,7 +38,7 @@ namespace DefaultNamespace
 
             AIManagerSingleton.instance.survivorCount++;
             
-            Instantiate(survivors[survivorPick], transform.position, Quaternion.identity);
+            AIManagerSingleton.instance.playerTrans.GetComponent<Player>().AddFollower(spawnPoint);
 
             timer = 0;
         }

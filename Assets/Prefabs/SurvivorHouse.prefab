@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4340948925899689672}
   - component: {fileID: 7550328765686323308}
   - component: {fileID: 332547849624279977}
+  - component: {fileID: 7590258373422233742}
   m_Layer: 0
   m_Name: SurvivorHouse
   m_TagString: Untagged
@@ -95,11 +96,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4340948925899689673}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6799998, y: 0.79580593, z: 1.121867}
-  m_Center: {x: 0, y: -0.51710093, z: -0.46093342}
+  m_Size: {x: 1.6799998, y: 0.79580593, z: 2.23891}
+  m_Center: {x: 0, y: -0.51710093, z: -1.0194546}
 --- !u!114 &332547849624279977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,9 +118,26 @@ MonoBehaviour:
   - {fileID: 1006909916027545021, guid: 0fe0780af4437324c9feeb7270d04c9d, type: 3}
   - {fileID: 4628649374169965510, guid: 97b1de4a43741e44ea6fca2f83c45537, type: 3}
   - {fileID: 3668070104333169326, guid: bf42588332bf32449b4cc31c8aa29863, type: 3}
+  spawnPoint: {fileID: 7630025656233064391}
   spawnTime: 1
   timer: 0
   canSpawn: 0
+--- !u!54 &7590258373422233742
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340948925899689673}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8817049167965514730
 GameObject:
   m_ObjectHideFlags: 0
