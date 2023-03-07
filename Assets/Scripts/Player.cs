@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Vector2 moveInput = new Vector2();
     [SerializeField]private float moveSpeed = 5;
     [SerializeField] private Transform cam;
+    [SerializeField] private float camFollowDistance = 5;
     private Vector2 cameraPoint = new Vector2();
 
     private void Awake()
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
         delta = (moveInput) * (moveSpeed * Time.fixedDeltaTime);
         characterController.Move(delta);
 
-        if (Vector2.Distance(transform.position,cameraPoint) > 5)
+        if (Vector2.Distance(transform.position,cameraPoint) > camFollowDistance)
         {
             cameraPoint += delta;
         }
