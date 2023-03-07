@@ -7,11 +7,6 @@ namespace DefaultNamespace
     {
         [SerializeField] private Vector2 attackBounds;
 
-        private void Update()
-        {
-            Move(Time.deltaTime);
-        }
-
         private void OnDrawGizmos()
         {
             Color prevCol = Gizmos.color;
