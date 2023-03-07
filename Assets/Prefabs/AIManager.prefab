@@ -47,10 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: []
-  Spawners: []
+  zombieSpawners:
+  - {fileID: 6654993057959391194}
+  - {fileID: 3129618352894746474}
   playerTrans: {fileID: 0}
   zombieLimit: 0
+  zombieCount: 0
   survivorLimit: 0
+  survivorCount: 0
 --- !u!1001 &1066420595107152160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,6 +125,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3671143764343619401, guid: d3f44bf450033f346bda3ea98edac4c6, type: 3}
   m_PrefabInstance: {fileID: 1066420595107152160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6654993057959391194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5951479474051215098, guid: d3f44bf450033f346bda3ea98edac4c6, type: 3}
+  m_PrefabInstance: {fileID: 1066420595107152160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fecbd024df4d6f9cff39f9331efc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8789131206035534224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +197,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f44bf450033f346bda3ea98edac4c6, type: 3}
+--- !u!114 &3129618352894746474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5951479474051215098, guid: d3f44bf450033f346bda3ea98edac4c6, type: 3}
+  m_PrefabInstance: {fileID: 8789131206035534224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fecbd024df4d6f9cff39f9331efc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5407628594377330393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3671143764343619401, guid: d3f44bf450033f346bda3ea98edac4c6, type: 3}

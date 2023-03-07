@@ -15,8 +15,11 @@ namespace DefaultNamespace
         {
             if (timer < spawnTime)
             {
-                timer += dt * Random.value;
+                timer += dt;
+                return;
             }
+
+            AIManagerSingleton.instance.zombieCount++;
             
             Instantiate(zombiePrefab, transform.position, Quaternion.identity);
 
