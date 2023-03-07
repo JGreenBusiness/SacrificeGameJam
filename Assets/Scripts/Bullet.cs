@@ -6,11 +6,15 @@ namespace DefaultNamespace
     public class Bullet : MonoBehaviour
     {
         public Vector2 direction;
-        private float timeToDecay = 2;
-        
+        [SerializeField]private float timeToDecay = 2;
         [SerializeField]private float bulletSpeed = 2;
 
-        
+
+        private void Awake()
+        {
+        }
+
+
         private void Update()
         {
             
@@ -25,6 +29,17 @@ namespace DefaultNamespace
                 {
                     Destroy(gameObject);
                 }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("Hit");
+            if (other.TryGetComponent(out ZombieBehaviour _enemy))
+            {
+                Debug.Log("Enemy Hit");
+                Destroy(_enemy.gameObject);
+                Destroy(gameObject);
             }
         }
     }
