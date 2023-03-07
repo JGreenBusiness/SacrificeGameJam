@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 delta;
-        delta = (moveInput) * (moveSpeed * Time.fixedDeltaTime);
+        delta = (moveInput.normalized) * (moveSpeed * Time.fixedDeltaTime);
         characterController.Move(delta);
 
         if (Vector2.Distance(transform.position,cameraPoint) > camFollowDistance)
@@ -48,6 +48,6 @@ public class Player : MonoBehaviour
             cameraPoint += delta;
         }
 
-        cam.position = new Vector3(cameraPoint.x,cameraPoint.y,cam.position.z);
+        cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,cameraPoint.y,cam.position.z),moveSpeed * Time.fixedDeltaTime);
     }
 }
