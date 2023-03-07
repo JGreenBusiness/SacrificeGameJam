@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject survivorPrefab;
     public List<FollowerBehaviour> followers;
 
+    private Gun gun;
+    
     private void Awake()
     {
         if (!gameObject.TryGetComponent(out characterController))
@@ -42,8 +44,6 @@ public class Player : MonoBehaviour
     {
         Vector2 delta;
 
-        transform.right *= moveInput.x;
-        
         delta = (moveInput.normalized) * (moveSpeed * Time.fixedDeltaTime);
         characterController.Move(delta);
 
@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
 
         cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,
             Mathf.RoundToInt(cam.position.y * 100) / 100,cam.position.z),moveSpeed * Time.fixedDeltaTime);
+        
     }
 
     public void AddFollower()
@@ -81,4 +82,25 @@ public class Player : MonoBehaviour
         Destroy(followers[0].gameObject);
         followers.Remove(followers[0]);
     }
+
+    public bool AddAmmo(int _ammo)
+    {
+        if (gun.ammo == gun.clipSize)
+        {
+            return false;
+        }
+        
+        if (_ammo > gun.clipSize)
+        {
+            _ammo = gun.clipSize;
+        }
+        else
+        {
+            gun.ammo = _ammo;
+        }
+
+        return true;
+    }
+
+    public void SetGun(Gun _gun) => gun = _gun;
 }
