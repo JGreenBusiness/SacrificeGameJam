@@ -7,6 +7,7 @@ namespace DefaultNamespace
     {
         
         [SerializeField] private Transform owner;
+        private Player player;
         [SerializeField] private Bullet bullet = null;
         private bool shootInput = false;
         [SerializeField] private float gunDistance = 1f;
@@ -14,13 +15,22 @@ namespace DefaultNamespace
         [SerializeField] private float fireRate = .3f;
         private float fireTimer = 0f;
         private bool fired = false;
+        
+        public int clipSize = 10;
+        public int ammo;
+
         private void Awake()
         {
         }
 
         private void Start()
         {
+            if (owner.TryGetComponent(out player))
+            {
+                player.SetGun(this);
+            }
             fireTimer = fireRate;
+            ammo = clipSize;
         }
 
         private void Update()
@@ -44,7 +54,7 @@ namespace DefaultNamespace
             
             transform.LookAt(new Vector3(worldMousePos.x,worldMousePos.y,transform.position.z));
             
-            if(!fired && shootInput)
+            if(!fired && shootInput && ammo > 0)
             {
                 Shoot(direction);
             }
@@ -62,6 +72,7 @@ namespace DefaultNamespace
             Vector3 bulletPoint = transform.position + (transform.right*bulletDistance);
             Instantiate(bullet,new Vector3(bulletPoint.x,bulletPoint.y,0),transform.rotation);
             fired = true;
+            ammo--;
         }
         
     }
