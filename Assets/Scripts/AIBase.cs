@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -7,7 +8,17 @@ namespace DefaultNamespace
         [SerializeField] private Transform target;
         [SerializeField] private float moveSpeed;
         [SerializeField] private float stopThreshold;
-        
+
+        private void Awake()
+        {
+            AIManagerSingleton.instance.ai.Add(this);
+        }
+
+        private void OnDestroy()
+        {
+            AIManagerSingleton.instance.ai.Remove(this);
+        }
+
         public void SetTarget(Transform _target)
         {
             target = _target;

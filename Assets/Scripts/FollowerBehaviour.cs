@@ -15,10 +15,5 @@ namespace DefaultNamespace
             
             SetTarget(player.followers[index].transform);
         }
-
-        private void Update()
-        {
-            Move(Time.deltaTime);
-        }
     }
 }
