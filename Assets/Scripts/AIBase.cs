@@ -11,6 +11,7 @@ namespace DefaultNamespace
 
         private void Awake()
         {
+            SetTarget(AIManagerSingleton.instance.playerTrans);
             AIManagerSingleton.instance.ai.Add(this);
         }
 

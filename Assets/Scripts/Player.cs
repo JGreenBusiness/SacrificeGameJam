@@ -49,7 +49,8 @@ public class Player : MonoBehaviour
             cameraPoint += delta;
         }
 
-        cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,cameraPoint.y,cam.position.z),moveSpeed * Time.fixedDeltaTime);
+        cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,
+            Mathf.RoundToInt(cam.position.y * 100) / 100,cam.position.z),moveSpeed * Time.fixedDeltaTime);
     }
 
     public void AddFollower()
