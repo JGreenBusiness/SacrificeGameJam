@@ -8,6 +8,7 @@ namespace DefaultNamespace
         [SerializeField] private Vector2 attackBounds;
         private void OnDestroy()
         {
+            AIManagerSingleton.instance.zombieCount--;
             AIManagerSingleton.instance.ai.Remove(this);
         }
         

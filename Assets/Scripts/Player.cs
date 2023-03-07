@@ -52,8 +52,10 @@ public class Player : MonoBehaviour
             cameraPoint += delta;
         }
 
-        cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,
-            Mathf.RoundToInt(cam.position.y * 100) / 100,cam.position.z),moveSpeed * Time.fixedDeltaTime);
+        cam.position = new Vector3(AIManagerSingleton.instance.playerTrans.position.x, cam.position.y, cam.position.z);
+        
+        //cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,
+        //    Mathf.RoundToInt(cam.position.y * 100) / 100,cam.position.z),moveSpeed * Time.fixedDeltaTime);
         
     }
 
