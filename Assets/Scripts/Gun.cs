@@ -60,7 +60,7 @@ namespace DefaultNamespace
             
             bullet.direction = transform.forward;
             Vector3 bulletPoint = transform.position + (transform.right*bulletDistance);
-            Instantiate(bullet,bulletPoint,transform.rotation);
+            Instantiate(bullet,new Vector3(bulletPoint.x,bulletPoint.y,0),transform.rotation);
             fired = true;
         }
         
