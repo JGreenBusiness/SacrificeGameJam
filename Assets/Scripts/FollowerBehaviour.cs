@@ -1,18 +1,24 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class FollowerBehaviour : AIBase
     {
-        private void SetTarget(Player player, int index)
+        public void SetTarget(Player player, int index)
         {
-            if (index == 0)
+            if (index < 0)
             {
                 SetTarget(player.transform);
                 return;
             }
             
             SetTarget(player.followers[index].transform);
+        }
+
+        private void Update()
+        {
+            Move(Time.deltaTime);
         }
     }
 }

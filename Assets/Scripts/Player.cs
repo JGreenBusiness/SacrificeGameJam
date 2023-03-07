@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float camFollowDistance = 5;
     private Vector2 cameraPoint = new Vector2();
 
+    [SerializeField] private GameObject survivorPrefab;
     public List<FollowerBehaviour> followers;
 
     private void Awake()
@@ -49,5 +50,31 @@ public class Player : MonoBehaviour
         }
 
         cam.position = Vector3.Slerp(cam.position,new Vector3(cameraPoint.x,cameraPoint.y,cam.position.z),moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void AddFollower()
+    {
+        // instantiates a new survivor
+        GameObject survivor = Instantiate(survivorPrefab);
+        FollowerBehaviour newFollower = survivor.GetComponent<FollowerBehaviour>();
+
+        // Runs the SetTarget function for the survivor
+        int index = followers.Count - 1;
+        followers.Add(newFollower);
+        newFollower.SetTarget(this, index);
+    }
+
+    public void RemoveFollower()
+    {
+        if (followers.Count <= 0)
+            return;
+        
+        // Sets the second survivor to the new leader
+        if (followers.Count > 1)
+            followers[1].SetTarget(this, -1);
+        
+        // Destroys the first survivor
+        Destroy(followers[0].gameObject);
+        followers.Remove(followers[0]);
     }
 }
